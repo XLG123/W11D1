@@ -12,20 +12,22 @@ function App() {
   const [isBrown, setIsBrown] = useState(false);
   const [isLightBrown, setIsLightBrown] = useState(false);
   const [isYellow, setIsYellow] = useState(false);
+
   useEffect(()=>{
     const colors=[];
-// console.log("color change ::red " ,isRed)
-// console.log("color change ::orange " ,isOrange)
-// console.log("color change ::brown " ,isBrown)
-// console.log("color change ::light brown " ,isLightBrown)
-// console.log("color change ::yellow " ,isYellow)
-if (isRed){colors.push('red')}
-if (isOrange){colors.push('orange')}
-if (isBrown){colors.push('brown')}
-if (isLightBrown){colors.push('lightBrown')}
-if (isYellow){colors.push('yellow')}
-setFeatherColors(colors)
-  },[isRed,isOrange,isBrown,isLightBrown,isYellow])
+    // console.log("color change ::red " ,isRed)
+    // console.log("color change ::orange " ,isOrange)
+    // console.log("color change ::brown " ,isBrown)
+    // console.log("color change ::light brown " ,isLightBrown)
+    // console.log("color change ::yellow " ,isYellow)
+    if (isRed){colors.push('red')}
+    if (isOrange){colors.push('orange')}
+    if (isBrown){colors.push('brown')}
+    if (isLightBrown){colors.push('lightBrown')}
+    if (isYellow){colors.push('yellow')}
+
+    setFeatherColors(colors)
+      },[isRed,isOrange,isBrown,isLightBrown,isYellow])
 
   return (
     <>
@@ -81,7 +83,7 @@ setFeatherColors(colors)
         featherCount={featherCount}
         featherColors={featherColors}
       />
-      <Message size={size} />
+      <Message size={size} featherCount = {featherCount} />
     </>
   );
 }
